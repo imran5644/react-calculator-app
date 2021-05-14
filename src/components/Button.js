@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
+import '../stylesheet/Button.css';
 
 const Button = ({ name }) => (
-  <div className="button">
+  <button type="button" className="Button">
     { name }
-  </div>
+  </button>
 );
 
 Button.propTypes = {

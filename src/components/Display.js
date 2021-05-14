@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
+import '../stylesheet/Display.css';
 
 const Display = ({ result }) => (
-  <div>{result}</div>
+  <div className="Display">{result}</div>
 );
 
 Display.defaultProps = {
