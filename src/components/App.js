@@ -1,6 +1,10 @@
+import ButtonPanel from './ButtonPanel';
+import Display from './Display';
+
 const App = () => (
   <div className="App">
-    Calculator Project
+    <Display />
+    <ButtonPanel />
   </div>
 );
 
