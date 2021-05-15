@@ -1,7 +1,7 @@
 import Button from './Button';
 
 const ButtonPanel = () => (
-  <div>
+  <>
     <div>
       <Button name="AC" />
       <Button name="+/-" />
@@ -32,7 +32,7 @@ const ButtonPanel = () => (
       <Button name="=" />
     </div>
 
-  </div>
+  </>
 );
 
 export default ButtonPanel;
