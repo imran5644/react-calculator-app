@@ -8,9 +8,9 @@ const calculate = ({ total, next, operation }, buttonName) => {
     case 'AC':
       return { total: 0, next: 0, operation };
 
-    case '%' :
+    case '%':
       return operate(total, next, buttonName);
-      
+
     default:
       return operate(total, next, buttonName);
   }

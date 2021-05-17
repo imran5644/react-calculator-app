@@ -27,9 +27,9 @@ const operate = (firstNum, secondNum, operation) => {
       total = bigFirstNum / bigSecondNum;
       result = { total, next: total, operation };
       break;
-    
+
     case '%':
-        return { total: bigFirstNum, next: bigSecondNum/100, operation }
+      return { total: bigFirstNum, next: bigSecondNum / 100, operation };
 
     default:
       result = { bigFirstNum, bigSecondNum, operation };
