@@ -9,27 +9,27 @@ const operate = (firstNum, secondNum, operation) => {
 
   switch (operation) {
     case '+':
-      total = bigFirstNum + bigSecondNum;
+      total = bigFirstNum.plus(bigSecondNum);
       result = { total, next: total, operation };
       break;
 
     case '-':
-      total = bigFirstNum - bigSecondNum;
+      total = bigFirstNum.minus(bigSecondNum);
       result = { total, next: total, operation };
       break;
 
     case 'X':
-      total = bigFirstNum * bigSecondNum;
+      total = bigFirstNum.times(bigSecondNum);
       result = { total, next: total, operation };
       break;
 
-    case '/':
-      total = bigFirstNum / bigSecondNum;
+    case '÷':
+      total = bigFirstNum.div(bigSecondNum);
       result = { total, next: total, operation };
       break;
 
     case '%':
-      return { total: bigFirstNum, next: bigSecondNum / 100, operation };
+      return { total: bigFirstNum, next: bigSecondNum.div(100), operation };
 
     default:
       result = { bigFirstNum, bigSecondNum, operation };
