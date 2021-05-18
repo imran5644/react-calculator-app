@@ -3,8 +3,6 @@ import Display from './Display';
 import calculate from '../logic/calculate';
 import React, { Component } from 'react';
 
-calculate(4, 5, '+');
-
 class App extends Component {
    constructor(props) {
      super(props);
@@ -22,9 +20,11 @@ class App extends Component {
       operation: buttonName,
      };
 
-     const { total, next } = this.state;
+     let { total, next } = this.state;
+     total = total == null ? 0 : total;
+     next = next == null ? 0 : next;
 
-     calculate(total, next, buttonName);
+     calculate({total, next, buttonName}, buttonName);
    }
 
    render() {
@@ -32,7 +32,7 @@ class App extends Component {
       return (
         <>
           <Display result = { next === null ? total : next } />
-          <ButtonPanel handleClick = { this.handleClick }/>
+          <ButtonPanel clickHandler = { this.handleClick }/>
         </>
       );
     }
