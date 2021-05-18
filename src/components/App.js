@@ -38,14 +38,19 @@ class App extends Component {
            }
            break;
 
-         case '%':
-         case 'AC':
+           case '=':
+            if (total === null) {
+              this.setState({
+                total: next,
+                next: null,
+              });
+            } else {
            this.setState(calculate({ total, next, operation}, buttonName));
-           result = calculate({ total, next, operation }, buttonName);
+            }
            break;
 
          default:
-           console.log(buttonName);
+          this.setState(calculate({ total, next, operation }, buttonName));
        }
      }
    }

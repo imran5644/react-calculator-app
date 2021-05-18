@@ -11,6 +11,9 @@ const calculate = ({ total, next, operation }, buttonName) => {
     case '%':
       return operate(total, next, buttonName);
 
+    case '=':
+      return operate(total, next, operation);
+      
     default:
       return operate(total, next, buttonName);
   }
