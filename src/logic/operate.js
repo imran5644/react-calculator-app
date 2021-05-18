@@ -14,12 +14,12 @@ const operate = (firstNum, secondNum, operation) => {
       break;
 
     case '-':
-      total = bigFirstNum.minus(bigSecondNum).toString();;
+      total = bigFirstNum.minus(bigSecondNum).toString();
       result = { total, next: null, operation };
       break;
 
     case 'X':
-      total = bigFirstNum.times(bigSecondNum).toString();;
+      total = bigFirstNum.times(bigSecondNum).toString();
       result = { total, next: null, operation };
       break;
 
@@ -30,8 +30,8 @@ const operate = (firstNum, secondNum, operation) => {
         total = bigFirstNum.div(bigSecondNum).toString();
         result = { total, next: null, operation };
       }
-        break;
-        
+      break;
+
     case '%':
       result = bigSecondNum.div(100).toString();
       if (bigFirstNum === null) {
