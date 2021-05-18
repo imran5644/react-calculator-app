@@ -16,7 +16,12 @@ class App extends Component {
 
    handleClick = (buttonName) => {
      const { total, next, operation } = this.state;
-     if (buttonName in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']) {
+     if (buttonName === '.') {
+      this.setState({
+        next: next == null ? `0${buttonName}` : next + buttonName,
+      });
+    }
+     else if (buttonName in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']) {
        this.setState = ({
          next: next == null ? buttonName : next + buttonName,
        });
