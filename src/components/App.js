@@ -1,41 +1,64 @@
+import React, { Component } from 'react';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
 import calculate from '../logic/calculate';
-import React, { Component } from 'react';
 
 class App extends Component {
-   constructor(props) {
-     super(props);
+  constructor(props) {
+    super(props);
 
-     this.state = {
-       total: null,
-       next: null,
-       operation: null,
-     };
-   }
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    };
+  }
 
-   handleClick = buttonName => {
-     this.setState = {
-      ...this.state,
-      operation: buttonName,
-     };
+   handleClick = (buttonName) => {
+     let result = '';
+     const { total, next, operation } = this.state;
+     if (buttonName in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']) {
+       this.setState = ({
+         next: next == null ? buttonName : next + buttonName,
+       });
+     } else {
+       switch (buttonName) {
+         case '+':
+         case '-':
+         case 'X':
+         case '÷':
 
-     let { total, next } = this.state;
-     total = total == null ? 0 : total;
-     next = next == null ? 0 : next;
+           this.setState({
+             total: next,
+             next: null,
+             operation: buttonName,
+           });
+           break;
 
-     calculate({total, next, buttonName}, buttonName);
+         case '%':
+           result = calculate(total, next, operation);
+           this.setState({
+             total: result.total,
+             next: result.next,
+             operation: result.operation,
+           });
+           break;
+
+         default:
+           console.log(buttonName);
+       }
+     }
    }
 
    render() {
      const { next, total } = this.state;
-      return (
-        <>
-          <Display result = { next === null ? total : next } />
-          <ButtonPanel clickHandler = { this.handleClick }/>
-        </>
-      );
-    }
-  } 
+     return (
+       <>
+         <Display result={next === null ? total : next} />
+         <ButtonPanel clickHandler={this.handleClick} />
+       </>
+     );
+   }
+}
 
 export default App;
