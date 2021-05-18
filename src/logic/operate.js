@@ -32,7 +32,6 @@ const operate = (firstNum, secondNum, operation) => {
       total = bigFirstNum.mod(bigSecondNum);
       return { total, next: total, operation };
 
-
     default:
       result = { bigFirstNum, bigSecondNum, operation };
       break;
