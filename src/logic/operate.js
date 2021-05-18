@@ -29,13 +29,14 @@ const operate = (firstNum, secondNum, operation) => {
       break;
 
     case '%':
-      if (numberTwo != null) {
-        return { total: bigFirstNum, next: bigSecondNum.div(100), operation };
+      result = bigSecondNum.div(100).toString();
+      if (bigFirstNum === null) {
+        return { total: result, next: null, operation };
       }
-      return { total: bigFirstNum.div(100), next: bigSecondNum, operation };
+      return { total: bigFirstNum.toString(), next: result, operation };
 
     default:
-      result = { bigFirstNum, bigSecondNum, operation };
+      result = { total: bigFirstNum.toString(), next: bigSecondNum, operation };
       break;
   }
 

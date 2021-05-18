@@ -11,11 +11,14 @@ class App extends Component {
       total: null,
       next: null,
       operation: null,
+      lastClicked: null,
     };
   }
 
    handleClick = (buttonName) => {
-     const { total, next, operation } = this.state;
+    const { total, next, operation, lastClicked } = this.state;
+    const operations = ['+', '-', '÷', 'X', '='];
+    
      if (buttonName === '.') {
       this.setState({
         next: next == null ? `0${buttonName}` : next + buttonName,
@@ -31,25 +34,16 @@ class App extends Component {
          case '-':
          case 'X':
          case '÷':
-          if (total === null) {
-           this.setState({
-             total: next,
-             next: null,
-             operation: buttonName,
-           });
-          }
-           else {
-            this.setState(calculate({ total, next, operation }, buttonName));
-           }
-           break;
+         
 
            case '=':
             if (total === null) {
               this.setState({
                 total: next,
                 next: null,
+                operation: buttonName,
               });
-            } else {
+            } else if (!operations.includes(lastClicked)) {
            this.setState(calculate({ total, next, operation}, buttonName));
             }
            break;
@@ -58,6 +52,7 @@ class App extends Component {
           this.setState(calculate({ total, next, operation }, buttonName));
        }
      }
+     this.setState({ lastClicked: buttonName });
    }
 
    render() {
