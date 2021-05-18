@@ -16,11 +16,23 @@ class App extends Component {
      };
    }
 
+   handleClick = buttonName => {
+     this.setState = {
+      ...this.state,
+      operation: buttonName,
+     };
+
+     const { total, next } = this.state;
+
+     calculate(total, next, buttonName);
+   }
+
    render() {
+     const { next, total } = this.state;
       return (
         <>
-          <Display />
-          <ButtonPanel />
+          <Display result = { next === null ? total : next } />
+          <ButtonPanel handleClick = { this.handleClick }/>
         </>
       );
     }
