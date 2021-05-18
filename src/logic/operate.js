@@ -24,10 +24,14 @@ const operate = (firstNum, secondNum, operation) => {
       break;
 
     case '÷':
-      total = bigFirstNum.div(bigSecondNum).toString();;
-      result = { total, next: null, operation };
-      break;
-
+      if (bigSecondNum === '0') {
+        result = { total: 'undefined', next: null, operation };
+      } else {
+        total = bigFirstNum.div(bigSecondNum).toString();
+        result = { total, next: null, operation };
+      }
+        break;
+        
     case '%':
       result = bigSecondNum.div(100).toString();
       if (bigFirstNum === null) {
