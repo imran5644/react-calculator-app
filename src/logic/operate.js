@@ -34,7 +34,7 @@ const operate = (firstNum, secondNum, operation) => {
         return { total: result, next: null, operation };
       }
       result = Big(secondNum).div(100).toString();
-      return { total: secondNum, next: result, operation };
+      return { total: secondNum, next: null, operation };
     default:
       result = { total: Big(firstNum).toString(), next: secondNum, operation };
   }
