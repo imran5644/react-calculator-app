@@ -43,7 +43,11 @@ const calculate = ({
     return result;
   }
   if (total !== null && next !== null && buttonName === '%' && lastClicked !== '%') {
-    result = operate(total, next, buttonName);
+    if (operation === '+' || operation === '-') {
+      result = operate(total, total * next, buttonName);
+    } else {
+      result = operate(total, next, buttonName);
+    }
     result.operation = operation;
     return result;
   }
