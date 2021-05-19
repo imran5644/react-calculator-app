@@ -25,10 +25,10 @@ class App extends Component {
   }
 
   render() {
-    const { next, total } = this.state;
+    const result = this.state;
     return (
       <>
-        <Display result={next === null ? total : next} />
+        <Display result={result} />
         <ButtonPanel clickHandler={this.handleClick} />
       </>
     );

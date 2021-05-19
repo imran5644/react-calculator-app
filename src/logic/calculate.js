@@ -44,18 +44,21 @@ const calculate = ({
   }
 
   if (buttonName === 'AC') {
-    return { total: null, next: null, operation };
+    return { total: null, next: null, operation: null };
+  }
+  if (buttonName === '%') {
+    result = operate(data.total, data.next, buttonName);
+    result = { ...result, operation: data.operation };
+    return result;
   }
   if (data.next !== null) {
     switch (buttonName) {
       case '+/-':
-        return { total: data.total * -1, next: data.next * -1, operation: data.operation };
-      case '%':
-        result = operate(data.total, data.next, buttonName);
-        result = { ...result, operation: data.operation };
-        return result;
+        return { total, next: data.next * -1, operation: data.operation };
       case '=':
-        return operate(data.total, data.next, data.operation);
+        result = operate(data.total, data.next, data.operation);
+        result.operation = null;
+        return result;
       default:
         return operate(data.total, data.next, buttonName);
     }

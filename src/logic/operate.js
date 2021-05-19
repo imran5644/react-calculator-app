@@ -33,10 +33,12 @@ const operate = (firstNum, secondNum, operation) => {
       break;
 
     case '%':
-      result = bigSecondNum.div(100).toString();
+
       if (bigFirstNum === null) {
+        result = bigSecondNum.div(100).toString();
         return { total: result, next: null, operation };
       }
+      result = bigSecondNum.div(100).toString();
       return { total: bigFirstNum.toString(), next: result, operation };
 
     default:
