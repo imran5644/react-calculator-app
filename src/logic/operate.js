@@ -24,7 +24,7 @@ const operate = (firstNum, secondNum, operation) => {
       break;
 
     case '÷':
-      if (bigSecondNum === '0') {
+      if (secondNum === '0') {
         result = { total: 'undefined', next: null, operation };
       } else {
         total = bigFirstNum.div(bigSecondNum).toString();
