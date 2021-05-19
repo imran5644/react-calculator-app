@@ -42,6 +42,11 @@ const calculate = ({
     result.operation = buttonName;
     return result;
   }
+  if (total !== null && next !== null && buttonName === '%' && lastClicked !== '%') {
+    result = operate(total, next, buttonName);
+    result.operation = operation;
+    return result;
+  }
   const data = prepareData(total, next, operation, buttonName, lastClicked);
   if (buttonName === '.') {
     return data;
@@ -55,7 +60,10 @@ const calculate = ({
   }
   if (buttonName === '%') {
     result = operate(data.total, data.next, buttonName);
-    result = { ...result, operation: data.operation };
+    return result;
+  }
+  if (lastClicked === '%' && buttonName !== '%' && operations.includes(buttonName) && buttonName !== '=') {
+    result = { total, next, operation: buttonName };
     return result;
   }
   if (data.next !== null) {

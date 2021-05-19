@@ -1,50 +1,43 @@
 import Big from 'big.js';
 
 const operate = (firstNum, secondNum, operation) => {
-  const bigFirstNum = Big(firstNum);
-  const bigSecondNum = Big(secondNum);
-
   let result = {};
   let total = 0;
-
   switch (operation) {
-    case '+':
-      total = bigFirstNum.plus(bigSecondNum).toString();
-      result = { total: null, next: total, operation };
-      break;
-
-    case '-':
-      total = bigFirstNum.minus(bigSecondNum).toString();
-      result = { total: null, next: total, operation };
-      break;
-
-    case 'X':
-      total = bigFirstNum.times(bigSecondNum).toString();
-      result = { total: null, next: total, operation };
-      break;
-
     case '÷':
       if (secondNum === '0') {
         result = { total: 'undefined', next: null, operation };
       } else {
-        total = bigFirstNum.div(bigSecondNum).toString();
+        total = Big(firstNum).div(secondNum).toString();
         result = { total: null, next: total, operation };
       }
       break;
-
+    case '-':
+      total = Big(firstNum).minus(secondNum).toString();
+      result = { total: null, next: total, operation };
+      break;
+    case '+':
+      total = Big(firstNum).plus(secondNum).toString();
+      result = { total: null, next: total, operation };
+      break;
+    case 'X':
+      total = Big(firstNum).times(secondNum).toString();
+      result = { total: null, next: total, operation };
+      break;
     case '%':
-
-      if (bigFirstNum === null) {
-        result = bigSecondNum.div(100).toString();
+      if (firstNum === null) {
+        result = Big(secondNum).div(100).toString();
         return { total: result, next: null, operation };
       }
-      result = bigFirstNum.div(100).toString();
-      return { total: result, next: null, operation: null };
-
+      if (firstNum !== null && secondNum == null) {
+        result = Big(firstNum).div(100).toString();
+        return { total: result, next: null, operation };
+      }
+      result = Big(secondNum).div(100).toString();
+      return { total: secondNum, next: result, operation };
     default:
-      result = { total: bigFirstNum.toString(), next: bigSecondNum, operation };
+      result = { total: Big(firstNum).toString(), next: secondNum, operation };
   }
-
   return result;
 };
 
