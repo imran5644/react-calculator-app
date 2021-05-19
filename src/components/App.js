@@ -26,8 +26,16 @@ class App extends Component {
 
   render() {
     const result = this.state;
+    const {
+      total, next, operation, lastClicked,
+    } = this.state;
     return (
       <>
+        <div>
+          {
+            `${total} ${operation} ${next} ${lastClicked}`
+          }
+        </div>
         <Display result={result} />
         <ButtonPanel clickHandler={this.handleClick} />
       </>
