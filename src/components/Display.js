@@ -21,9 +21,9 @@ const Display = ({ result }) => {
 
 Display.propTypes = {
   result: PropTypes.shape({
-    total: PropTypes.string,
-    next: PropTypes.string,
-    operation: PropTypes.string,
+    total: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    next: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    operation: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   }).isRequired,
 };
 
