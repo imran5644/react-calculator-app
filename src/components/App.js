@@ -11,17 +11,15 @@ class App extends Component {
       total: null,
       next: null,
       operation: null,
-      lastClicked: null,
     };
   }
 
   handleClick = (buttonName) => {
     this.setState(({
-      total, next, operation, lastClicked,
+      total, next, operation,
     }) => calculate({
-      total, next, operation, lastClicked,
+      total, next, operation,
     }, buttonName));
-    this.setState({ lastClicked: buttonName });
   }
 
   render() {
