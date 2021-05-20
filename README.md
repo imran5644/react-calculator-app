@@ -2,9 +2,13 @@
 
 <p align="center">Calculator app in React is a practice project, which includes manipulate dynamically the Virtual DOM and use States and Props to change information accordingly with the user interactions . Built with React, JavaScript, HTML5, CSS3, Bootstrap, Big.js and Prop-types.</p>
 
+
+![screenshot](./screenshot.JPG)
+
+
 ## Live Link Demo
 
-[Live Link Demo](https://happy-beaver-bd6fa8.netlify.app/)
+[Live Link Demo](https://hopeful-kalam-11a0e1.netlify.app/)
 
 ## Built With
 
