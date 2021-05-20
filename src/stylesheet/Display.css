@@ -1,0 +1,9 @@
+.Display {
+  text-align: right;
+  background-color: gray;
+  width: 400px;
+  height: 100px;
+  color: white;
+  padding-top: 50px;
+  font-size: 26px;
+}
