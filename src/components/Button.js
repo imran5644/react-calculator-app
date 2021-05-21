@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types';
 import '../stylesheet/Button.css';
 
-const Button = ({ name, clickHandler }) => {
+const Button = ({
+  name, clickHandler, operator, wide,
+}) => {
   const handleClick = (buttonName) => clickHandler(buttonName);
   return (
     <button
       type="button"
       onClick={(event) => handleClick(event.target.name)}
       name={name}
-      className="Button"
+      className={`${operator} ${wide}`}
     >
       {name}
     </button>
@@ -18,6 +20,13 @@ const Button = ({ name, clickHandler }) => {
 Button.propTypes = {
   name: PropTypes.string.isRequired,
   clickHandler: PropTypes.func.isRequired,
+  operator: PropTypes.string,
+  wide: PropTypes.string,
+};
+
+Button.defaultProps = {
+  operator: 'Button',
+  wide: '',
 };
 
 export default Button;
