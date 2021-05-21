@@ -1,6 +1,18 @@
-.Button {
+.Button,
+.operator {
   display: inline-block;
-  width: 100px;
+  width: 25%;
   height: 100px;
-  background-color: rgb(231, 229, 229);
+  border: 1px solid black;
+  background-color: #dfdfdf;
+  font-weight: bold;
+  font-size: large;
+}
+
+.operator {
+  background-color: #ff8f32;
+}
+
+.span2 {
+  width: 50%;
 }
