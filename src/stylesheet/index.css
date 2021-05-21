@@ -1,6 +1,14 @@
 main {
   display: flex;
   justify-content: space-between;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(104, 103, 103, 0.8)),
+   url("background.jpg") 100%/100% no-repeat;
+   height: 600px;
+}
+
+div.quote {
+  width: 50%;
+  margin: 0 auto;
 }
 
 q {
@@ -15,6 +23,12 @@ q {
 header {
   display: flex;
   justify-content: space-between;
+  background-color: black;
+  padding: 10px;
+}
+
+header h1 {
+  color: white;
 }
 
 ul {
@@ -27,7 +41,20 @@ li {
   padding-left: 30px;
 }
 
-a:hover {
+.footer-link,
+.footer-link:visited {
+  color: black;
+  font-weight: bold;
+}
+
+.nav-link,
+.nav-link:visited {
+  color: white;
+  font-weight: bold;
+}
+
+.nav-link:hover,
+.footer-link:hover {
   text-decoration: none;
   color: green;
 }
