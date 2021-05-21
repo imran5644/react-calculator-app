@@ -19,10 +19,13 @@ const App = () => {
 
   const result = calculator;
   return (
-    <div className="calculator">
-      <Display result={result} />
-      <ButtonPanel clickHandler={handleClick} />
-    </div>
+    <main>
+      <h1>Let&apos;s do some Math!</h1>
+      <div className="calculator">
+        <Display result={result} />
+        <ButtonPanel clickHandler={handleClick} />
+      </div>
+    </main>
   );
 };
 

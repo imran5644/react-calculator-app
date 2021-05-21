@@ -1,3 +1,33 @@
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+q {
+  font-weight: bold;
+  font-size: 20px;
+}
+
 .calculator {
-    width: 700px;
-  }
+  width: 700px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+li {
+  padding-left: 30px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: green;
+}
