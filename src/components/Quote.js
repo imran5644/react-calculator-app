@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Quote = () => (
   <main>
     <div className="quote">

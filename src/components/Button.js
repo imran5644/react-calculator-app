@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import '../stylesheet/Button.css';
+import React from 'react';
 
 const Button = ({
   name, clickHandler, operator, wide,

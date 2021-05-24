@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import '../stylesheet/Display.css';
+import React from 'react';
 
 const Display = ({ result }) => {
   const { total, next, operation } = result;

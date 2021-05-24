@@ -3,6 +3,7 @@ import NavBar from './NavBar';
 import Home from './Home';
 import App from './App';
 import Quote from './Quote';
+import React from 'react';
 
 const Routes = () => (
   <Router>
