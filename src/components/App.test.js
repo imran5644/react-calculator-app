@@ -1,15 +1,15 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import App from './App';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import App from './App';
 import '@testing-library/jest-dom';
 
 describe('Calculator', () => {
   it('Renders the Calculator page', () => {
     const calculator = renderer
-    .create(<App />)
-    .toJSON();
+      .create(<App />)
+      .toJSON();
     expect(calculator).toMatchSnapshot();
   });
 });
@@ -17,7 +17,7 @@ describe('Calculator', () => {
 describe('Calculator component', () => {
   beforeEach(() => {
     render(<App />);
-  })
+  });
 
   it('Adds two numbers', async () => {
     await userEvent.click(screen.getByText('3'));
@@ -91,5 +91,5 @@ describe('Calculator component', () => {
     await userEvent.click(screen.getByText('0'));
     await userEvent.click(screen.getByText('AC'));
     expect(screen.queryByText('80')).toBeNull();
-  });  
-})
+  });
+});

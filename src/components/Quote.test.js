@@ -4,7 +4,7 @@ import Quote from './Quote';
 
 it('Renders the Quote page', () => {
   const quote = renderer
-  .create(<Quote />)
-  .toJSON();
+    .create(<Quote />)
+    .toJSON();
   expect(quote).toMatchSnapshot();
 });

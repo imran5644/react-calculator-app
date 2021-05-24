@@ -4,7 +4,7 @@ import Home from './Home';
 
 it('Renders the Home page', () => {
   const home = renderer
-  .create(<Home />)
-  .toJSON();
+    .create(<Home />)
+    .toJSON();
   expect(home).toMatchSnapshot();
 });
