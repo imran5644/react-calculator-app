@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Calculator Renders the Calculator page 1`] = `
+exports[`Calculator snapshot Renders the Calculator page 1`] = `
 <main>
   <h1>
     Let's do some Math!

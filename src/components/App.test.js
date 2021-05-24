@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event';
 import App from './App';
 import '@testing-library/jest-dom';
 
-describe('Calculator', () => {
+describe('Calculator snapshot', () => {
   it('Renders the Calculator page', () => {
     const calculator = renderer
       .create(<App />)
@@ -14,7 +14,7 @@ describe('Calculator', () => {
   });
 });
 
-describe('Calculator component', () => {
+describe('Calculator methods', () => {
   beforeEach(() => {
     render(<App />);
   });
@@ -32,7 +32,7 @@ describe('Calculator component', () => {
     expect(display).toBeInTheDocument();
   });
 
-  it('Substracts two numbers', async () => {
+  it('Subtracts two numbers', async () => {
     await userEvent.click(screen.getByText('5'));
     await userEvent.click(screen.getByText('2'));
     await userEvent.click(screen.getByText('5'));
