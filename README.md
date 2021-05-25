@@ -8,7 +8,7 @@
 
 ## Live Link Demo
 
-[Live Link Demo](https://hopeful-kalam-11a0e1.netlify.app/)
+[Live Link Demo](https://nostalgic-hugle-6ba60c.netlify.app/)
 
 ## Built With
 
