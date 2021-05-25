@@ -1,6 +1,6 @@
 <h3 align="center">Calculator App</h3>
 
-<p align="center">Calculator app in React is a practice project, which includes manipulate dynamically the Virtual DOM and use States and Props to change information accordingly with the user interactions . Built with React, JavaScript, HTML5, CSS3, Bootstrap, Big.js and Prop-types.</p>
+<p align="center">Calculator V1 app in React is a practice project, which includes manipulate dynamically the Virtual DOM and, use States and Props (useState Hook) to change information accordingly with the user interactions. In order to test the calculate method and React Components I use Jest and React Testing Library. Built with React, JavaScript, HTML5, CSS3, Bootstrap, Big.js and Prop-types.</p>
 
 
 ![screenshot](./screenshot.JPG)
@@ -8,7 +8,7 @@
 
 ## Live Link Demo
 
-[Live Link Demo](https://hopeful-kalam-11a0e1.netlify.app/)
+[Live Link Demo](https://nostalgic-hugle-6ba60c.netlify.app/)
 
 ## Built With
 
@@ -17,6 +17,8 @@
 - CSS3
 - Bootstrap
 - JavaScript
+- Jest
+- React Testing Library
 
 
 ## Getting Started
@@ -46,6 +48,11 @@ To make any change,
   - Run `npm start` on your terminal to open the server automatically on your browser
   - If it doesn't open automatically go to your browser and type the url `http://localhost:3000`
   - If you prefer to use the production minified JavaScript file run `npm run build` to create the build folder with the distribution files that can be served on your server.
+
+
+## Test
+  - Run `npm run test` to perform unit tests towards calculate.js file and, also tests if React components are being correctly rendered and all calculator methods are being performed as expected;
+
 
 ## Author
 
@@ -78,6 +85,9 @@ Give a ⭐️ if you like this project!
 - W3Schools
 - Font Awesome
 - Javascript
+- Jest
+- React Testing Library
+- Regenerator Runtime
 
 ## 📝 License
 

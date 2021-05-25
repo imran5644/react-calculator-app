@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculator snapshot Renders the Calculator page 1`] = `
+<main>
+  <h1>
+    Let's do some Math!
+  </h1>
+  <div
+    className="calculator"
+  >
+    <div
+      className="Display"
+    >
+      
+    
+    
+    </div>
+    <div>
+      <button
+        className="Button "
+        name="AC"
+        onClick={[Function]}
+        type="button"
+      >
+        AC
+      </button>
+      <button
+        className="Button "
+        name="+/-"
+        onClick={[Function]}
+        type="button"
+      >
+        +/-
+      </button>
+      <button
+        className="Button "
+        name="%"
+        onClick={[Function]}
+        type="button"
+      >
+        %
+      </button>
+      <button
+        className="operator "
+        name="÷"
+        onClick={[Function]}
+        type="button"
+      >
+        ÷
+      </button>
+    </div>
+    <div>
+      <button
+        className="Button "
+        name="7"
+        onClick={[Function]}
+        type="button"
+      >
+        7
+      </button>
+      <button
+        className="Button "
+        name="8"
+        onClick={[Function]}
+        type="button"
+      >
+        8
+      </button>
+      <button
+        className="Button "
+        name="9"
+        onClick={[Function]}
+        type="button"
+      >
+        9
+      </button>
+      <button
+        className="operator "
+        name="X"
+        onClick={[Function]}
+        type="button"
+      >
+        X
+      </button>
+    </div>
+    <div>
+      <button
+        className="Button "
+        name="4"
+        onClick={[Function]}
+        type="button"
+      >
+        4
+      </button>
+      <button
+        className="Button "
+        name="5"
+        onClick={[Function]}
+        type="button"
+      >
+        5
+      </button>
+      <button
+        className="Button "
+        name="6"
+        onClick={[Function]}
+        type="button"
+      >
+        6
+      </button>
+      <button
+        className="operator "
+        name="-"
+        onClick={[Function]}
+        type="button"
+      >
+        -
+      </button>
+    </div>
+    <div>
+      <button
+        className="Button "
+        name="1"
+        onClick={[Function]}
+        type="button"
+      >
+        1
+      </button>
+      <button
+        className="Button "
+        name="2"
+        onClick={[Function]}
+        type="button"
+      >
+        2
+      </button>
+      <button
+        className="Button "
+        name="3"
+        onClick={[Function]}
+        type="button"
+      >
+        3
+      </button>
+      <button
+        className="operator "
+        name="+"
+        onClick={[Function]}
+        type="button"
+      >
+        +
+      </button>
+    </div>
+    <div>
+      <button
+        className="Button "
+        name="0"
+        onClick={[Function]}
+        type="button"
+      >
+        0
+      </button>
+      <button
+        className="Button "
+        name="."
+        onClick={[Function]}
+        type="button"
+      >
+        .
+      </button>
+      <button
+        className="operator "
+        name="="
+        onClick={[Function]}
+        type="button"
+      >
+        =
+      </button>
+    </div>
+  </div>
+</main>
+`;
